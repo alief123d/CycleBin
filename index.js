@@ -1,11 +1,11 @@
 
 let sampah;
-let provinsi;
+let kota;
 let partisipan;
 
 let uptoPartisipan = 0;
 let uptoSampah = 0;
-let uptoProvinsi = 0;
+let uptokota = 0;
 const scrollOffset = 85;
 let isCounting = false;
 
@@ -25,7 +25,7 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > scrollOffset && !isCounting) {
         // Start the counting functions
         sampah = setInterval(countSampah);
-        provinsi = setInterval(countProvinsi);
+        kota = setInterval(countkota);
         partisipan = setInterval(countPartisipan);
         isCounting = true;
     }
@@ -39,11 +39,11 @@ function countSampah() {
     }
 }
 
-function countProvinsi() {
-    let count = document.getElementById("provinsi");
-    count.innerHTML = ++uptoProvinsi;
-    if (uptoProvinsi === 38) {
-        clearInterval(provinsi);
+function countkota() {
+    let count = document.getElementById("kota");
+    count.innerHTML = ++uptokota;
+    if (uptokota === 98) {
+        clearInterval(kota);
     }
 }
 
@@ -54,3 +54,12 @@ function countPartisipan() {
         clearInterval(partisipan);
     }
 }
+
+document.querySelectorAll('.readmore-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        this.classList.add('clicked');
+        setTimeout(() => {
+            this.classList.remove('clicked');
+        }, 200); // Durasi animasi
+    });
+});

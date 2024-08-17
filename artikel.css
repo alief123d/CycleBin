@@ -1,0 +1,58 @@
+body{
+    background-color:#f0f0f0;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 350px;
+    border-radius:8px ;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin:20px;
+}
+.card img{
+    width:100%;
+    height:auto;
+}
+
+.thumbnail{
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.thumbnail > img {
+    height: 100%;
+}
+
+.card-content p{
+    color:#666;
+    justify-content: center;
+}
+.card-content .readmore-btn{
+    display: inline-block;
+    padding:8px 16px;
+    background-color: #468585;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color:#fff;
+    
+}
+.readmore-btn {
+    transition: transform 0.2s ease;
+}
+.readmore-btn:active {
+    transform: scale(0.95);
+}
+.clicked {
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+
