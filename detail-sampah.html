@@ -45,6 +45,10 @@
       .glass{
         @apply bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10;
       }
+
+      .card{
+        @apply flex rounded-2xl border border-slate-200 w-1/3 overflow-hidden shadow-lg;
+      }
     }
   </style>
 </head>
@@ -100,40 +104,56 @@
               <p class="text-xl mt-3 text-white lg:text-center">Berikut detail jenis sampah yang kami terima beserta harga yang kami tawarkan</p>
             </div>
              <div class="h-full w-full bg-black absolute">
-              <img src="asset/Global Oligarchy_ Richest 300 persons on Earth have more money than poorest 3 billion.jfif" alt="" class="object-cover w-full h-full opacity-30">
-              <!-- https://id.pinterest.com/pin/406590672581271010/ -->
+              <img src="asset/plastic-waste-quietly-gathers-ocean-unnoticed-by-marine-life.jpg" alt="" class="object-cover w-full h-full opacity-30">
+              <!-- https://www.freepik.com/free-photo/plastic-waste-quietly-gathers-ocean-unnoticed-by-marine-life_135009193.htm#fromView=search&page=2&position=24&uuid=a3a1f8ac-a22e-47ad-b169-91d153687a11 -->
              </div>
         </div>
     </section>
 
     <section class="w-full min-h-screen lg:h-screen">
-      <div class="flex justify-center items-center py-10  w-full h-full flex-col">
+      <div class="flex justify-center items-center py-10 mt-20  w-full h-full flex-col">
         <h1 class="lg:text-5xl lead text-4xl">Plastik</h1>
-        <div class="flex w-full flex-wrap justify-center gap-5 gap-y-10 lg:gap-10 my-10">
-          <div class="text-center bg-[#9cdba6] p-5 rounded-2xl">
-            <img src="asset/icon-detail-sampah/icon kantong plastik.png" alt="" class="lg:w-48 lg:h-48 w-28 h-28">
-            <!-- https://id.pinterest.com/pin/464855992804292154/ -->
-            <p class="lg:text-xl font-semibold">Kantong Plastik</p>
-            <p class="text-lg font-bold">Rp. 5.000/Kg</p>
-          </div>
-          <div class="text-center bg-[#9cdba6] p-5 rounded-2xl">
-            <img src="asset/icon-detail-sampah/icon botol plastik.png" alt="" class="lg:w-48 lg:h-48 w-28 h-28">
-            <!-- https://id.pinterest.com/pin/1075093742291852333/ -->
-            <p class="lg:text-xl font-semibold">Botol Plastik</p>
-            <p class="text-lg font-bold">Rp. 5.000/Kg</p>
-          </div>
-          <div class="text-center bg-[#9cdba6] p-5 rounded-2xl">
-            <img src="asset/icon-detail-sampah/icon gelas plastik.jfif" alt="" class="lg:w-48 lg:h-48 w-28 h-28">
-            <!-- https://id.pinterest.com/pin/1014506253547699257/ -->
-            <p class="lg:text-xl font-semibold">Gelas plastik</p>
-            <p class="text-lg font-bold">Rp. 5.000/Kg</p>
-          </div>
-          <div class="text-center bg-[#9cdba6] p-5 rounded-2xl">
-            <img src="asset/icon-detail-sampah/icon pipet.png" alt="" class="lg:w-48 lg:h-48 w-28 h-28">
-            <!-- https://id.pinterest.com/pin/379428337373547431/ -->
-            <p class="lg:text-xl font-semibold">Pipet</p>
-            <p class="text-lg font-bold">Rp. 5.000/Kg</p>
-          </div>
+        <div class="flex w-full flex-wrap justify-center gap-10 mt-16">
+          <div class="card">
+            <div class="lg:w-52 lg:h-52">
+              <img src="asset/close-up-blue-garbage-bag-sand-beach.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://www.freepik.com/free-photo/close-up-blue-garbage-bag-sand-beach_5127465.htm#fromView=image_search_similar&page=1&position=30&uuid=1af88545-d8a7-4058-93dc-cd62608b77ba -->
+             <div class="mx-auto my-auto">
+              <p class="lg:text-xl font-semibold">Kantong Plastik</p>
+              <p class="text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-52 lg:h-52">
+              <img src="asset/top-view-plastic-bottles.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://www.freepik.com/free-photo/top-view-plastic-bottles_27605006.htm#fromView=search&page=1&position=0&uuid=3ef7efa3-b979-4301-8b93-87928070bb47 -->
+             <div class="mx-auto my-auto">
+              <p class="lg:text-xl font-semibold">Botol Plastik</p>
+              <p class="text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-52 lg:h-52">
+              <img src="asset/close-up-sustainable-drinking-cup-alternatives.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://www.freepik.com/free-photo/close-up-blue-garbage-bag-sand-beach_5127465.htm#fromView=image_search_similar&page=1&position=30&uuid=1af88545-d8a7-4058-93dc-cd62608b77ba -->
+             <div class="mx-auto my-auto">
+              <p class="lg:text-xl font-semibold">Gelas Plastik</p>
+              <p class="text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-52 lg:h-52">
+              <img src="asset/elbow-straw-compostable-straw-adjustable-pipette.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://images.app.goo.gl/jV8McMHCcSXXSxdq8 -->
+             <div class="mx-auto my-auto">
+              <p class="lg:text-xl font-semibold">Pipet plastik</p>
+              <p class="text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>   
         </div>
       </div>
     </section>
