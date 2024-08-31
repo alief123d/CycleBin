@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Jual Sampah</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    @layer utilities {
+
+        .lead {
+          color: #468585;
+          font-weight: bold;
+          font-family: poppins;
+        }
+
+        .primary {
+          background-color: #468585;
+        }
+
+        .secondary {
+          background-color: #50b498;
+        }
+
+        .hamburger-active > .bungkus > span:nth-child(1){
+          @apply rotate-45;
+        }
+  
+        .hamburger-active > .bungkus > span:nth-child(3){
+          @apply -rotate-45;
+        }
+  
+        .hamburger-active > .bungkus > span:nth-child(2){
+          @apply scale-0;
+        } 
+      }
+    </style>
+</head>
+
+<body>
+  <header class="secondary 2xl:p-2 opacity-90 fixed top-0 left-0 w-full flex items-center justify-center z-30">
+    <div class="container px-5">
+      <div class="flex items-center relative">
+        <div class="px-4">
+          <a href="#" class="font-bold text-primary text-3xl 2xl:text-4xl block py-6 text-white">CycleBin</a>
+        </div>
+        <div class="flex items-center px-4 w-1/2 w-full">
+          <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+            <div class="bungkus space-y-2">
+              <span
+                class="block w-[30px] h-[2px] bg-gray-600 transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="block w-[30px] h-[2px] bg-gray-600 transition duration-300 ease-in-out"></span>
+              <span
+                class="block w-[30px] h-[2px] bg-gray-600 transition duration-300 ease-in-out origin-bottom-left"></span>
+            </div>
+          </button>
+
+          <nav id="nav-menu"
+            class="lg:block lg:static lg:bg-transparent lg:max-w-full hidden absolute right-0 py-5 top-full bg-white shadow-lg w-full lg:shadow-none lg:rounded-none">
+            <ul class="block lg:flex lg:text-white justify-end">
+              <li class="group">
+                <a href="home.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Home</a>
+              </li>
+              <li class="group">
+                <a href="shop.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Produk</a>
+              </li>
+              <li class="group">
+                <a href="artikel.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Artikel</a>
+              </li>
+              <li class="group">
+                <a href="#" class="py-2 text-xl mx-8 flex 2xl:text-xl">Profile</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="w-full h-screen">
+    <div class="w-full h-full flex items-center p-24 mt-12 gap-5">
+      <div class="border-[#50b498] border-2 p-10 w-full rounded-xl">
+        <h1 class="lead lg:text-5xl">Profile</h1>
+        <div class="py-5">
+          <div>
+            <label for="nama" class="font-bold text-lg">Nama Lengkap :</label>
+            <input id="nama" type="text" class="w-full border h-10 px-5">
+          </div>
+          <div class="my-4">
+            <label for="Nomor-Hp" class="font-bold text-lg">Nomor Hp :</label>
+            <input id="Nomor-Hp" type="text" class="w-full border h-10 px-5">
+          </div>
+          <div>
+            <label for="email" class="font-bold text-lg">email :</label>
+            <input id="email" type="text" class="w-full border h-10 px-5">
+          </div>
+        </div>
+      </div>
+      <div class="border-[#50b498] border-2 p-10 w-1/3 rounded-xl h-full">
+        <h1 class="lead lg:text-5xl">Sampah</h1>
+        <div class="py-5 flex flex-wrap gap-5">
+          <input type="checkbox" id="Plastik" name="checkbox" value="1">
+          <label for="Plastik"> Plastik</label>
+          <input type="checkbox" id="Kardus" name="checkbox" value="1">
+          <label for="Kardus"> Kardus</label>
+          <input type="checkbox" id="Kaleng" name="checkbox" value="1">
+          <label for="Kaleng"> Kaleng</label>
+          <input type="checkbox" id="kain" name="checkbox" value="1">
+          <label for="kain"> kain</label>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

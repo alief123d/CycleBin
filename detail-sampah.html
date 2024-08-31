@@ -47,7 +47,7 @@
       }
 
       .card{
-        @apply flex rounded-2xl border border-slate-200 w-1/3 overflow-hidden shadow-lg;
+        @apply flex flex-col lg:flex-row rounded-2xl border border-slate-200 lg:w-1/3 w-1/2 h-64 lg:h-auto overflow-hidden shadow-lg bg-white;
       }
     }
   </style>
@@ -55,13 +55,13 @@
 
 <body>
 
-  <header class="secondary opacity-90 fixed top-0 left-0 w-full flex items-center z-40">
+  <header class="secondary 2xl:p-2 opacity-90 fixed top-0 left-0 w-full flex items-center justify-center z-30">
     <div class="container px-5">
-      <div class="flex items-center w-full justify-between relative">
+      <div class="flex items-center relative">
         <div class="px-4">
-          <a href="#" class="font-bold text-primary text-3xl block py-6 text-white">CycleBin</a>
+          <a href="#" class="font-bold text-primary text-3xl 2xl:text-4xl block py-6 text-white">CycleBin</a>
         </div>
-        <div class="flex items-center px-4">
+        <div class="flex items-center px-4 w-1/2 w-full">
           <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
             <div class="bungkus space-y-2">
               <span
@@ -74,28 +74,25 @@
 
           <nav id="nav-menu"
             class="lg:block lg:static lg:bg-transparent lg:max-w-full hidden absolute right-0 py-5 top-full bg-white shadow-lg w-full lg:shadow-none lg:rounded-none">
-            <ul class="block lg:flex lg:text-white">
+            <ul class="block lg:flex lg:text-white justify-end">
               <li class="group">
-                <a href="home.html" class="py-2 text-xl mx-8 flex">Home</a>
+                <a href="home.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Home</a>
               </li>
               <li class="group">
-                <a href="#" class="py-2 text-xl mx-8 flex">Layanan</a>
+                <a href="shop.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Produk</a>
               </li>
               <li class="group">
-                <a href="#" class="py-2 text-xl mx-8 flex">Produk</a>
+                <a href="artikel.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Artikel</a>
               </li>
               <li class="group">
-                <a href="#" class="py-2 text-xl mx-8 flex">Artikel</a>
-              </li>
-              <li class="group">
-                <a href="#" class="py-2 text-xl mx-8 flex">Profile</a>
+                <a href="#" class="py-2 text-xl mx-8 flex 2xl:text-xl">Profile</a>
               </li>
             </ul>
           </nav>
         </div>
       </div>
     </div>
-</header>
+  </header>
 
     <section class="w-full h-screen overflow-hidden">
         <div class="flex justify-center items-center w-full h-full px-10 lg:px-0">
@@ -104,54 +101,188 @@
               <p class="text-xl mt-3 text-white lg:text-center">Berikut detail jenis sampah yang kami terima beserta harga yang kami tawarkan</p>
             </div>
              <div class="h-full w-full bg-black absolute">
-              <img src="asset/plastic-waste-quietly-gathers-ocean-unnoticed-by-marine-life.jpg" alt="" class="object-cover w-full h-full opacity-30">
+              <img src="asset/plastic-waste-quietly-gathers-ocean-unnoticed-by-marine-life_1_11zon.jpg" alt="" class="object-cover w-full h-full opacity-30">
               <!-- https://www.freepik.com/free-photo/plastic-waste-quietly-gathers-ocean-unnoticed-by-marine-life_135009193.htm#fromView=search&page=2&position=24&uuid=a3a1f8ac-a22e-47ad-b169-91d153687a11 -->
              </div>
         </div>
     </section>
 
-    <section class="w-full min-h-screen lg:h-screen">
-      <div class="flex justify-center items-center py-10 mt-20  w-full h-full flex-col">
+    <section class="w-full min-h-screen lg:mb-24 flex justify-center items-center">
+      <div class="flex justify-center items-center py-16  w-full h-full flex-col">
         <h1 class="lg:text-5xl lead text-4xl">Plastik</h1>
-        <div class="flex w-full flex-wrap justify-center gap-10 mt-16">
+        <div class="flex w-full flex-wrap justify-center gap-5 lg:gap-10 mt-8 lg:mt-16">
           <div class="card">
-            <div class="lg:w-52 lg:h-52">
-              <img src="asset/close-up-blue-garbage-bag-sand-beach.jpg" alt="" class="w-full h-full object-cover">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/close-up-blue-garbage-bag-sand-beach_2_11zon.jpg" alt="" class="w-full h-full object-cover">
             </div>
             <!-- https://www.freepik.com/free-photo/close-up-blue-garbage-bag-sand-beach_5127465.htm#fromView=image_search_similar&page=1&position=30&uuid=1af88545-d8a7-4058-93dc-cd62608b77ba -->
-             <div class="mx-auto my-auto">
+             <div class="mx-auto my-auto text-center">
               <p class="lg:text-xl font-semibold">Kantong Plastik</p>
-              <p class="text-lg font-bold">Rp. 5.000/Kg</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
             </div>
           </div>  
           <div class="card">
-            <div class="lg:w-52 lg:h-52">
-              <img src="asset/top-view-plastic-bottles.jpg" alt="" class="w-full h-full object-cover">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/top-view-plastic-bottles_3_11zon.jpg" alt="" class="w-full h-full object-cover">
             </div>
             <!-- https://www.freepik.com/free-photo/top-view-plastic-bottles_27605006.htm#fromView=search&page=1&position=0&uuid=3ef7efa3-b979-4301-8b93-87928070bb47 -->
-             <div class="mx-auto my-auto">
+             <div class="mx-auto my-auto text-center">
               <p class="lg:text-xl font-semibold">Botol Plastik</p>
-              <p class="text-lg font-bold">Rp. 5.000/Kg</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
             </div>
           </div>  
           <div class="card">
-            <div class="lg:w-52 lg:h-52">
-              <img src="asset/close-up-sustainable-drinking-cup-alternatives.jpg" alt="" class="w-full h-full object-cover">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/close-up-sustainable-drinking-cup-alternatives_5_11zon.jpg" alt="" class="w-full h-full object-cover">
             </div>
             <!-- https://www.freepik.com/free-photo/close-up-blue-garbage-bag-sand-beach_5127465.htm#fromView=image_search_similar&page=1&position=30&uuid=1af88545-d8a7-4058-93dc-cd62608b77ba -->
-             <div class="mx-auto my-auto">
+             <div class="mx-auto my-auto text-center">
               <p class="lg:text-xl font-semibold">Gelas Plastik</p>
-              <p class="text-lg font-bold">Rp. 5.000/Kg</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
             </div>
           </div>  
           <div class="card">
-            <div class="lg:w-52 lg:h-52">
+            <div class="lg:w-40 lg:h-52 h-1/2">
               <img src="asset/elbow-straw-compostable-straw-adjustable-pipette.jpg" alt="" class="w-full h-full object-cover">
             </div>
             <!-- https://images.app.goo.gl/jV8McMHCcSXXSxdq8 -->
-             <div class="mx-auto my-auto">
+             <div class="mx-auto my-auto text-center">
               <p class="lg:text-xl font-semibold">Pipet plastik</p>
-              <p class="text-lg font-bold">Rp. 5.000/Kg</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>   
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full min-h-screen bg-[#def9c4] flex justify-center items-center">
+      <div class="flex justify-center items-center py-16  w-full h-full flex-col">
+        <h1 class="lg:text-5xl lead text-4xl">Kardus</h1>
+        <div class="flex w-full flex-wrap justify-center gap-5 lg:gap-10 mt-8 lg:mt-16">
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/kardus.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://images.app.goo.gl/tu7gSBr47SmCZthT8 -->
+             <div class="mx-auto my-auto text-center">
+              <p class="lg:text-xl font-semibold">Kardus</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/wall-karton.jfif" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://images.app.goo.gl/foybP2GNm66DGMTw9 -->
+             <div class="mx-auto my-auto text-center">
+              <p class="lg:text-xl font-semibold">Wall karton</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/kertas-karton.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://images.app.goo.gl/Y3ZcJfxCFJ5FMe38A -->
+             <div class="mx-auto my-auto text-center">
+              <p class="lg:text-xl font-semibold">Kertas karton</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full min-h-screen lg:mb-24 flex justify-center items-center">
+      <div class="flex justify-center items-center py-16  w-full h-full flex-col">
+        <h1 class="lg:text-5xl lead text-4xl">Logam</h1>
+        <div class="flex w-full flex-wrap justify-center gap-5 lg:gap-10 mt-8 lg:mt-16">
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/depositphotos_437224832-stock-photo-metal-tins-cans-jar-garbage.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://st2.depositphotos.com/4157421/43722/i/450/depositphotos_437224832-stock-photo-metal-tins-cans-jar-garbage.jpg -->
+             <div class="lg:w-52 my-auto text-center">
+              <p class="lg:text-xl font-semibold">Kaleng timah atau aluminium</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/top-view-plastic-bottles_3_11zon.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://www.freepik.com/free-photo/top-view-plastic-bottles_27605006.htm#fromView=search&page=1&position=0&uuid=3ef7efa3-b979-4301-8b93-87928070bb47 -->
+             <div class="mx-auto my-auto text-center">
+              <p class="lg:text-xl font-semibold">Aluminium foil</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/close-up-sustainable-drinking-cup-alternatives_5_11zon.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://www.freepik.com/free-photo/close-up-blue-garbage-bag-sand-beach_5127465.htm#fromView=image_search_similar&page=1&position=30&uuid=1af88545-d8a7-4058-93dc-cd62608b77ba -->
+             <div class="mx-auto my-auto text-center">
+              <p class="lg:text-xl font-semibold">Kaleng cat</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/elbow-straw-compostable-straw-adjustable-pipette.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://images.app.goo.gl/jV8McMHCcSXXSxdq8 -->
+             <div class="mx-auto my-auto text-center">
+              <p class="lg:text-xl font-semibold">Kaleng aerosol</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>   
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full min-h-screen bg-[#def9c4] flex justify-center items-center">
+      <div class="flex justify-center items-center py-16  w-full h-full flex-col">
+        <h1 class="lg:text-5xl lead text-4xl">Plastik</h1>
+        <div class="flex w-full flex-wrap justify-center gap-5 lg:gap-10 mt-8 lg:mt-16">
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/close-up-blue-garbage-bag-sand-beach_2_11zon.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://www.freepik.com/free-photo/close-up-blue-garbage-bag-sand-beach_5127465.htm#fromView=image_search_similar&page=1&position=30&uuid=1af88545-d8a7-4058-93dc-cd62608b77ba -->
+             <div class="mx-auto my-auto text-center">
+              <p class="lg:text-xl font-semibold">Kantong Plastik</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/top-view-plastic-bottles_3_11zon.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://www.freepik.com/free-photo/top-view-plastic-bottles_27605006.htm#fromView=search&page=1&position=0&uuid=3ef7efa3-b979-4301-8b93-87928070bb47 -->
+             <div class="mx-auto my-auto text-center">
+              <p class="lg:text-xl font-semibold">Botol Plastik</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/close-up-sustainable-drinking-cup-alternatives_5_11zon.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://www.freepik.com/free-photo/close-up-blue-garbage-bag-sand-beach_5127465.htm#fromView=image_search_similar&page=1&position=30&uuid=1af88545-d8a7-4058-93dc-cd62608b77ba -->
+             <div class="mx-auto my-auto text-center">
+              <p class="lg:text-xl font-semibold">Gelas Plastik</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
+            </div>
+          </div>  
+          <div class="card">
+            <div class="lg:w-40 lg:h-52 h-1/2">
+              <img src="asset/elbow-straw-compostable-straw-adjustable-pipette.jpg" alt="" class="w-full h-full object-cover">
+            </div>
+            <!-- https://images.app.goo.gl/jV8McMHCcSXXSxdq8 -->
+             <div class="mx-auto my-auto text-center">
+              <p class="lg:text-xl font-semibold">Pipet plastik</p>
+              <p class="text-2xl lg:text-lg font-bold">Rp. 5.000/Kg</p>
             </div>
           </div>   
         </div>
