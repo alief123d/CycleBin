@@ -56,12 +56,12 @@
 
 <body>
 
-  <header class="secondary 2xl:p-2 opacity-90 fixed top-0 left-0 w-full flex items-center justify-center z-30">
-    <div class="container px-10">
+  <header class="secondary opacity-90 fixed top-0 left-0 w-full flex items-center justify-center z-30">
+    <div class="container lg:px-10 p-5 lg:p-0">
       <div class="flex items-center relative">
         <div class="px-4 flex">
-          <a href="#" class="font-bold text-primary text-3xl 2xl:text-4xl block text-white flex gap-2 items-center">
-            <img src="asset/logo.png" alt="" class="w-14 h-14">
+          <a href="#" class="font-bold text-2xl text-primary lg:text-3xl 2xl:text-4xl block text-white flex gap-2 items-center">
+            <img src="asset/logo.png" alt="" class="lg:w-14 lg:h-14 h-12 w-12">
             <span>CycleBin</span>
           </a>
         </div>
@@ -77,7 +77,7 @@
           </button>
 
           <nav id="nav-menu"
-            class="lg:block lg:static lg:bg-transparent lg:max-w-full hidden absolute right-0 py-5 top-full bg-white shadow-lg w-full lg:shadow-none lg:rounded-none">
+            class="lg:block lg:static lg:bg-transparent lg:max-w-full hidden absolute right-0 py-5 top-16 bg-white shadow-lg w-full lg:shadow-none lg:rounded-none">
             <ul class="block lg:flex lg:text-white justify-end">
               <li class="group">
                 <a href="home.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Home</a>
@@ -101,13 +101,24 @@
   <section class="w-full min-h-screen">
     <div class="w-full h-full flex justify-center flex-col items-center my-20">
       <h1 class="text-3xl font-bold my-12 lead border-b-4 border-[#9cdba6]">Produk kami</h1>
+      <div class="w-full flex justify-center mb-10">
+        <form onsubmit="return searchProduct(event)" class="w-full lg:w-2/3 px-5 flex items-center">
+          <input type="text" id="searchInput" placeholder="Cari produk..." class="w-full rounded-md border px-4 py-2">
+          <button type="submit" class="ml-2 p-2 bg-gray-200 rounded" style="background-color: rgb(70, 133, 133, 1)">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-search text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" style="stroke: whitesmoke;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6M3 11a8 8 0 1116 0 8 8 0 01-16 0z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
       <div class="flex flex-col px-5 lg:flex-row gap-3 lg:flex-wrap justify-center items-center">
-        <div class="card group">
-          <div class="overflow-hidden">
-            <img src="asset/2trz1anbzjwtkel.jpeg" class="group-hover:scale-125 ease-in duration-500" alt="...">
+        <div class="card group mt-5" data-title="Miniatur Sepeda">
+          <div class="overflow-hidden bg-slate-400 w-full h-56">
+            <img src="asset/foto-shop/2trz1anbzjwtkel.jpeg" class="group-hover:scale-125 ease-in duration-500 object-cover h-full w-full" alt="..."> <!-- cr=https://cdn.rri.co.id/berita/11/images/1709636337519-K/2trz1anbzjwtkel.jpeg-->
           </div>
           <div class="card-body mx-5 mt-2">
-            <h5 class="text-2xl font-bold">Miniatur sepeda </h5>
+            <h5 class="text-2xl font-bold">Miniatur Sepeda </h5>
             <p class="card-text">Miniatur sepeda cantik terbuat dari botol membuat tampilan rumah menjadi cantik.</p>
           </div>
           <div class="mb-5 mx-5">
@@ -118,29 +129,29 @@
             </div>
           </div>
         </div>
-        <div class="card group">
-          <div class="overflow-hidden">
-            <img src="asset/2trz1anbzjwtkel.jpeg" class="group-hover:scale-125 ease-in duration-500" alt="...">
+        <div class="card group mt-5" data-title="Aksesoris Organizer">
+          <div class="overflow-hidden bg-slate-400 w-full h-56">
+            <img src="asset/foto-shop/0804_025834_34de_inilah.com_.jpg" class="group-hover:scale-125 ease-in duration-500 object-cover h-full w-full" alt="..."> <!--cr=https://www.margasari.desa.id/wp-content/uploads/images/botol-minuman-bekas-cara-kreatif-membuat-aksesori-dan-perhiasan-yang-unik.webp-->
           </div>
           <div class="card-body mx-5 mt-2">
-            <h5 class="text-2xl font-bold">Miniatur sepeda </h5>
-            <p class="card-text">Miniatur sepeda cantik terbuat dari botol membuat tampilan rumah menjadi cantik.</p>
+            <h5 class="text-2xl font-bold">Aksesoris Organizer </h5>
+            <p class="card-text">Rak susun untuk menyimpan Aksesoris Anda agar terlihat lebih rapi.</p>
           </div>
           <div class="mb-5 mx-5">
-            <h3 class="mb-3 text-3xl font-bold">20.000</h3>
+            <h3 class="mb-3 text-3xl font-bold">10.000</h3>
              <div class="justify-end flex">
               <a href="https://wa.me/6282172699265?text=Halo,%20saya%20ingin%20membeli%20produk%20Kotak%20pensil"
                 class="btn-beli">Beli</a>
             </div>
           </div>
         </div>
-        <div class="card group">
-          <div class="overflow-hidden">
-            <img src="asset/2trz1anbzjwtkel.jpeg" class="group-hover:scale-125 ease-in duration-500" alt="...">
+        <div class="card group mt-5" data-title="Jepit Rambut Pita">
+          <div class="overflow-hidden bg-slate-400 w-full h-56">
+            <img src="asset/foto-shop/bandana_kain_perca.width-800.format-webp.webp" class="group-hover:scale-125 ease-in duration-500 object-cover h-full w-full" alt="..."> <!--cr=https://i.pinimg.com/564x/b5/2a/d2/b52ad20f402e73f028b339161f74cab7.jpg-->
           </div>
           <div class="card-body mx-5 mt-2">
-            <h5 class="text-2xl font-bold">Miniatur sepeda </h5>
-            <p class="card-text">Miniatur sepeda cantik terbuat dari botol membuat tampilan rumah menjadi cantik.</p>
+            <h5 class="text-2xl font-bold">Jepit rambut pita </h5>
+            <p class="card-text">Jepit rambut cantik membuat tampilan Anda semakin cantik</p>
           </div>
           <div class="mb-5 mx-5">
             <h3 class="mb-3 text-3xl font-bold">20.000</h3>
@@ -150,29 +161,29 @@
             </div>
           </div>
         </div>
-        <div class="card group">
-          <div class="overflow-hidden">
-            <img src="asset/2trz1anbzjwtkel.jpeg" class="group-hover:scale-125 ease-in duration-500" alt="...">
+        <div class="card group mt-5" data-title="Bunga Imitasi">
+          <div class="overflow-hidden bg-slate-400 w-full h-56">
+            <img src="asset/foto-shop/befunky-collage-2021-07-08t011543551-68a0162f55e1401ebe5d7cac9a627c6f-883a0eb280d93d1c509dc50217cbc63b.jpg" class="group-hover:scale-125 ease-in duration-500 object-cover h-full w-full" alt="..."> <!--cr=https://cdn.idntimes.com/content-images/community/2021/07/befunky-collage-2021-07-08t011543551-68a0162f55e1401ebe5d7cac9a627c6f-883a0eb280d93d1c509dc50217cbc63b.jpg-->
           </div>
           <div class="card-body mx-5 mt-2">
-            <h5 class="text-2xl font-bold">Miniatur sepeda </h5>
-            <p class="card-text">Miniatur sepeda cantik terbuat dari botol membuat tampilan rumah menjadi cantik.</p>
+            <h5 class="text-2xl font-bold">Bunga Imitasi </h5>
+            <p class="card-text">Bunga cantik terbuat dari limbah plasti cocok untuk pajangan rumah</p>
           </div>
           <div class="mb-5 mx-5">
-            <h3 class="mb-3 text-3xl font-bold">20.000</h3>
+            <h3 class="mb-3 text-3xl font-bold">10.000</h3>
              <div class="justify-end flex">
               <a href="https://wa.me/6282172699265?text=Halo,%20saya%20ingin%20membeli%20produk%20Kotak%20pensil"
                 class="btn-beli">Beli</a>
             </div>
           </div>
         </div>
-        <div class="card group">
-          <div class="overflow-hidden">
-            <img src="asset/2trz1anbzjwtkel.jpeg" class="group-hover:scale-125 ease-in duration-500" alt="...">
+        <div class="card group mt-5" data-title="Bantal Tidur">
+          <div class="overflow-hidden bg-slate-400 w-full h-56">
+            <img src="asset/foto-shop/fc5287610e10722dde3157ff5e777e05.jpg" class="group-hover:scale-125 ease-in duration-500 object-cover h-full w-full" alt="..."> <!--cr=https://i.pinimg.com/564x/a3/bc/c9/a3bcc9cd34ed819c6220280985f0157d.jpg-->
           </div>
           <div class="card-body mx-5 mt-2">
-            <h5 class="text-2xl font-bold">Miniatur sepeda </h5>
-            <p class="card-text">Miniatur sepeda cantik terbuat dari botol membuat tampilan rumah menjadi cantik.</p>
+            <h5 class="text-2xl font-bold">Bantal Tidur </h5>
+            <p class="card-text">Bantal nyaman dan empuk terbuat dari limbah kain perca.</p>
           </div>
           <div class="mb-5 mx-5">
             <h3 class="mb-3 text-3xl font-bold">20.000</h3>
@@ -182,17 +193,65 @@
             </div>
           </div>
         </div>
-        <div class="card group">
-          <div class="overflow-hidden">
-            <img src="asset/2trz1anbzjwtkel.jpeg" class="group-hover:scale-125 ease-in duration-500" alt="...">
+        <div class="card group mt-5" data-title="Piring Buah">
+          <div class="overflow-hidden bg-slate-400 w-full h-56">
+            <img src="asset/foto-shop/piring.jpg" class="group-hover:scale-125 ease-in duration-500 object-cover h-full w-full" alt="..."> <!-- https://images.app.goo.gl/9Svhq2PT2ThzimQw8 -->
           </div>
           <div class="card-body mx-5 mt-2">
-            <h5 class="text-2xl font-bold">Miniatur sepeda </h5>
-            <p class="card-text">Miniatur sepeda cantik terbuat dari botol membuat tampilan rumah menjadi cantik.</p>
+            <h5 class="text-2xl font-bold">Piring Buah</h5>
+            <p class="card-text">Piring buah terbuat dari limbah plastik cocok untuk tempat menaruh buah </p>
           </div>
           <div class="mb-5 mx-5">
             <h3 class="mb-3 text-3xl font-bold">20.000</h3>
             <div class="justify-end flex">
+              <a href="https://wa.me/6282172699265?text=Halo,%20saya%20ingin%20membeli%20produk%20Kotak%20pensil"
+                class="btn-beli">Beli</a>
+            </div>
+          </div>
+        </div>
+        <div class="card group mt-5" data-title="Organizer">
+          <div class="overflow-hidden bg-slate-400 w-full h-56">
+            <img src="asset/foto-shop/Screen-Shot-2020-04-30-at-11.57.26.png" class="group-hover:scale-125 ease-in duration-500 object-cover h-full w-full" alt="..."> <!--cr=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaE3015wXsr-vK98gRt1le0vGcq0P-bj-k-CHTxQLV3Bq1knu2-->
+          </div>
+          <div class="card-body mx-5 mt-2">
+            <h5 class="text-2xl font-bold">Organizer</h5>
+            <p class="card-text">Tempat penyimpanan barang dari limbah kardus cocok untuk tempat menyusun barang</p>
+          </div>
+          <div class="mb-5 mx-5">
+            <h3 class="mb-3 text-3xl font-bold">10.000</h3>
+             <div class="justify-end flex">
+              <a href="https://wa.me/6282172699265?text=Halo,%20saya%20ingin%20membeli%20produk%20Kotak%20pensil"
+                class="btn-beli">Beli</a>
+            </div>
+          </div>
+        </div>
+        <div class="card group mt-5" data-title="Mobil Mainan">
+          <div class="overflow-hidden bg-slate-400 w-full h-56">
+            <img src="asset/foto-shop/Se207e49f2be84cb9a24ceefaf31d748do.jpg_720x720q80.jpg" class="group-hover:scale-125 ease-in duration-500 object-cover h-full w-full" alt="..."> <!--cr=https://www.lazada.co.id/products/prakarya-barang-bekas-kardus-mobil-mobilan-kardus-i6374408538.html-->
+          </div>
+          <div class="card-body mx-5 mt-2">
+            <h5 class="text-2xl font-bold">Mobil Mainan</h5>
+            <p class="card-text">Mobil mainan terbuat dari kardus bekas cocok untuk mainan anak Anda</p>
+          </div>
+          <div class="mb-5 mx-5">
+            <h3 class="mb-3 text-3xl font-bold">5.000</h3>
+             <div class="justify-end flex">
+              <a href="https://wa.me/6282172699265?text=Halo,%20saya%20ingin%20membeli%20produk%20Kotak%20pensil"
+                class="btn-beli">Beli</a>
+            </div>
+          </div>
+        </div>
+        <div class="card group mt-5" data-title="Miniatur Kaleng Karakter">
+          <div class="overflow-hidden bg-slate-400 w-full h-56">
+            <img src="asset/foto-shop/tin6.jpg" class="group-hover:scale-125 ease-in duration-500 object-cover h-full w-full" alt="..."> <!--cr=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf0_K3a3rcZUJ2ilwMn1YIGhJdBKCcLd5jFWLYbIdgD8vyLFpV-->
+          </div>
+          <div class="card-body mx-5 mt-2">
+            <h5 class="text-2xl font-bold">Miniatur Kaleng Karakter</h5>
+            <p class="card-text">Miniatur kaleng lucu terbuat dari limbah kaleng cocok untuk pajangan di rumah Anda</p>
+          </div>
+          <div class="mb-5 mx-5">
+            <h3 class="mb-3 text-3xl font-bold">10.000</h3>
+             <div class="justify-end flex">
               <a href="https://wa.me/6282172699265?text=Halo,%20saya%20ingin%20membeli%20produk%20Kotak%20pensil"
                 class="btn-beli">Beli</a>
             </div>
@@ -203,6 +262,34 @@
   </section>
 
   <script src="nav.js"></script>
+  <script>
+    function searchProduct(event) {
+    event.preventDefault();
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+
+    
+    cards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        if (title.includes(input)) {
+            card.style.display = ''; 
+        } else {
+            card.style.display = 'none'; 
+        }
+    });
+
+    
+    const icon = document.querySelector('.icon-search');
+    icon.classList.add('animate');
+
+    
+    setTimeout(() => {
+        icon.classList.remove('animate');
+    }, 300);
+
+    return false; 
+  }
+  </script>
 </body>
 
 </html>

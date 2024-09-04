@@ -42,6 +42,14 @@
           @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#50b498] focus:border-[#50b498] block w-full p-2.5;
         }
 
+        .select2 {
+          @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#50b498] focus:border-[#50b498] block lg:w-1/3 p-2.5;
+        }
+
+        .btn-jual {
+            @apply hover:primary border-2 hover:bg-[#9cdba6] border-[#9cdba6] ease-in-out duration-300 hover:text-white px-10 rounded-full py-1 text-lg;
+          }
+
         .text {
           @apply block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 resize-none;
         }
@@ -50,11 +58,12 @@
 </head>
 
 <body>
-  <header class="secondary p-2 opacity-90 fixed top-0 left-0 w-full flex items-center justify-center z-30">
-    <div class="container lg:px-10">
+  <header class="secondary opacity-90 fixed top-0 left-0 w-full flex items-center justify-center z-30">
+    <div class="container lg:px-10 p-5 lg:p-0">
       <div class="flex items-center relative">
         <div class="px-4 flex">
-          <a href="#" class="font-bold text-2xl text-primary lg:text-3xl 2xl:text-4xl block text-white flex gap-2 items-center">
+          <a href="#"
+            class="font-bold text-2xl text-primary lg:text-3xl 2xl:text-4xl block text-white flex gap-2 items-center">
             <img src="asset/logo.png" alt="" class="lg:w-14 lg:h-14 h-12 w-12">
             <span>CycleBin</span>
           </a>
@@ -92,100 +101,182 @@
     </div>
   </header>
 
-    <div class="w-full min-h-screen">
-      <div class="w-full h-full flex flex-col lg:flex-row justify-center items-center lg:p-20 p-12">
-        <img src="asset/Premium_Vector___Garbage_Disposal_Illustration-removebg-preview.png" alt=""
-          class="lg:w-1/3 w-44 lg:mt-24 mt-12 lg:mx-24">
-        <!-- https://pin.it/4MuvCDSh7 -->
-        <div class="border-[#50b498] border-2 lg:p-10 p-5 lg:w-1/2 rounded-xl mt-5 lg:mt-24">
-          <h1 class="lead lg:text-5xl text-4xl mb-3">Profile</h1>
-          <div class="py-2">
-            <div>
-              <label for="nama" class="font-bold text-lg">Nama Lengkap :</label>
-              <input id="nama" type="text" class="w-full border h-9 px-5">
-            </div>
-            <div class="my-4">
-              <label for="Nomor-Hp" class="font-bold text-lg">Nomor Hp :</label>
-              <input id="Nomor-Hp" type="text" class="w-full border h-9 px-5">
-            </div>
-            <div>
-              <label for="email" class="font-bold text-lg">Email :</label>
-              <input id="email" type="text" class="w-full border h-9 px-5">
-            </div>
+  <div class="w-full min-h-full lg:h-full">
+    <div class="w-full h-full flex flex-col lg:flex-row justify-center items-center lg:p-20 p-12">
+      <img src="asset/Premium_Vector___Garbage_Disposal_Illustration-removebg-preview.png" alt=""
+        class="lg:w-1/3 w-44 lg:mt-24 mt-12 lg:mx-24">
+      <!-- https://pin.it/4MuvCDSh7 -->
+      <div class="border-[#50b498] border-2 lg:p-10 p-5 lg:w-1/2 rounded-xl mt-5 lg:mt-24">
+        <h1 class="lead lg:text-5xl text-4xl mb-3">Profile</h1>
+        <div class="py-2">
+          <div>
+            <label for="nama" class="font-bold text-lg">Nama Lengkap :</label>
+            <input required id="nama" type="text" class="w-full border h-9 px-5">
+          </div>
+          <div class="my-4">
+            <label for="Nomor-Hp" class="font-bold text-lg">Nomor Hp :</label>
+            <input required id="Nomor-Hp" type="text" class="w-full border h-9 px-5">
+          </div>
+          <div>
+            <label for="email" class="font-bold text-lg">Email :</label>
+            <input required id="email" type="text" class="w-full border h-9 px-5">
           </div>
         </div>
       </div>
-
-      <!-- <div class="border-r-2 h-52 absolute w-1/2 border-slate-400"></div> -->
-
-      <div class="w-full h-full lg:flex lg:items-center justify-center lg:p-20 p-7 bg-[#def9c4]">
-        <div class="border-[#50b498] border-2 lg:p-10 p-5 lg:w-1/2 rounded-xl lg:mt-24 bg-white">
-          <h1 class="lead lg:text-5xl text-4xl mb-3">Alamat</h1>
-          <div class="py-2 flex flex-col lg:flex-row gap-5">
-            <div class="w-full">
-              <div>
-                <label for="Provinsi" class="font-bold text-lg">Provinsi</label>
-                <select id="Provinsi" class="select" onchange="kota()">
-                  <option selected>Pilih Provinsi</option>
-                  <option value="Riau">Riau</option>
-                  <option value="Sumatera Barat">Sumatera Barat</option>
-                  <option value="Sumatera Utara">Sumatera Utara</option>
-                  <option value="DKI Jakarta">DKI jakarta</option>
-                </select>
-              </div>
-              <div class="mt-3">
-                <label for="Kota" class="font-bold text-lg">Kab/Kota :</label>
-                <select id="Kota" class="select" onchange="kecamatan()">
-                  <option selected>Pilih Kab/Kota</option>
-                </select>
-              </div>
-            </div>
-            <div class="w-full">
-              <div>
-                <label for="Kecamatan" class="font-bold text-lg">Kecamatan :</label>
-                <select id="Kecamatan" class="select" onchange="kelurahan()">
-                  <option selected>Pilih Kecamatan</option>
-                </select>
-              </div>
-              <div class="lg:mt-3 mt-5">
-                <label for="Kelurahan" class="font-bold text-lg">Kelurahan :</label>
-                <select id="Kelurahan" class="select">
-                  <option selected>Pilih Kelurahan</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="lg:mt-3 mt-5">
-            <label for="detail" class="font-bold text-lg">Detail</label>
-            <textarea id="detail" rows="4" class="text" placeholder="Tuliskan detail alamat mu"></textarea>
-          </div>
-        </div>
-        <img src="asset/5_Best_States_to_Incorporate_a_Nonprofit_Organization-removebg-preview.png" alt=""
-          class="w-1/3 lg:mt-24 lg:mx-24 hidden lg:block">
-        <!-- https://pin.it/ukVT7RtgN -->
-      </div>
-
-      <div class="w-full h-full lg:flex lg:items-center justify-center lg:p-20">
-        <div class="border-[#50b498] border-2 lg:p-10 p-5 w-1/2 rounded-xl mt-24">
-          <h1 class="lead lg:text-5xl text-4xl mb-3">Profile</h1>
-          <div class="py-2">
-            <div>
-              <label for="nama" class="font-bold text-lg">Nama Lengkap :</label>
-              <input id="nama" type="text" class="w-full border h-9 px-5">
-            </div>
-            <div class="my-4">
-              <label for="Nomor-Hp" class="font-bold text-lg">Nomor Hp :</label>
-              <input id="Nomor-Hp" type="text" class="w-full border h-9 px-5">
-            </div>
-            <div>
-              <label for="email" class="font-bold text-lg">Email :</label>
-              <input id="email" type="text" class="w-full border h-9 px-5">
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <!-- <div class="border-r-2 h-52 absolute w-1/2 border-slate-400"></div> -->
+
+    <div class="w-full h-full lg:flex lg:items-center justify-center lg:p-20 p-7 bg-[#def9c4]">
+      <div class="border-[#50b498] border-2 lg:p-10 p-5 lg:w-1/2 rounded-xl lg:mt-24 bg-white">
+        <h1 class="lead lg:text-5xl text-4xl mb-3">Alamat</h1>
+        <div class="py-2 flex flex-col lg:flex-row gap-5">
+          <div class="w-full">
+            <div>
+              <label for="Provinsi" class="font-bold text-lg">Provinsi</label>
+              <select id="Provinsi" class="select" onchange="kota()">
+                <option selected>Pilih Provinsi</option>
+                <option value="Riau">Riau</option>
+                <option value="Sumatera Barat">Sumatera Barat</option>
+                <option value="Sumatera Utara">Sumatera Utara</option>
+                <option value="DKI Jakarta">DKI jakarta</option>
+              </select>
+            </div>
+            <div class="mt-3">
+              <label for="Kota" class="font-bold text-lg">Kab/Kota :</label>
+              <select id="Kota" class="select" onchange="kecamatan()">
+                <option selected>Pilih Kab/Kota</option>
+              </select>
+            </div>
+          </div>
+          <div class="w-full">
+            <div>
+              <label for="Kecamatan" class="font-bold text-lg">Kecamatan :</label>
+              <select id="Kecamatan" class="select" onchange="kelurahan()">
+                <option selected>Pilih Kecamatan</option>
+              </select>
+            </div>
+            <div class="lg:mt-3 mt-5">
+              <label for="Kelurahan" class="font-bold text-lg">Kelurahan :</label>
+              <select id="Kelurahan" class="select">
+                <option selected>Pilih Kelurahan</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="lg:mt-3 mt-5">
+          <label for="detail" class="font-bold text-lg">Detail</label>
+          <textarea id="detail" rows="4" class="text" placeholder="Tuliskan detail alamat mu"></textarea>
+        </div>
+      </div>
+      <img src="asset/5_Best_States_to_Incorporate_a_Nonprofit_Organization-removebg-preview.png" alt=""
+        class="w-1/3 lg:mt-24 lg:mx-24 hidden lg:block">
+      <!-- https://pin.it/ukVT7RtgN -->
+    </div>
+
+    <div class="w-full h-full lg:flex lg:items-center justify-center lg:p-20 p-10">
+      <div class="border-[#50b498] border-2 lg:p-10 p-5 w-full rounded-xl">
+        <h1 class="lead lg:text-5xl text-4xl mb-3">Sampah</h1>
+        <div class="py-2">
+          <div class="lg:flex lg:gap-5">
+            <div class="lg:w-60 w-full flex flex-col">
+              <label for="kantongplastik" class="font-semibold text-lg">Kantong Plastik :</label>
+              <div class="w-full flex gap-2 items-center">
+                <input id="kantongplastik" type="text" class="sampah border h-9 px-2 w-full">
+                <p class="text-xl font-bold py-1">5000/kg</p>
+              </div>
+            </div>
+            <div class="lg:w-60 w-full flex flex-col">
+              <label for="botolplastik" class="font-semibold text-lg">Botol Plastik :</label>
+              <div class="w-full flex gap-2 items-center">
+                <input id="botolplastik" type="text" class="sampah border h-9 px-2 w-full">
+                <p class="text-xl font-bold py-1">5000/kg</p>
+              </div>
+            </div>
+            <div class="lg:w-60 w-full flex flex-col">
+              <label for="gelasplastik" class="font-semibold text-lg">Gelas Plastik :</label>
+              <div class="w-full flex gap-2 items-center">
+                <input id="gelasplastik" type="text" class="sampah border h-9 px-2 w-full">
+                <p class="text-xl font-bold py-1">5000/kg</p>
+              </div>
+            </div>
+            <div class="lg:w-60 w-full flex flex-col">
+              <label for="pipetplastik" class="font-semibold text-lg">Pipet Plastik :</label>
+              <div class="w-full flex gap-2 items-center">
+                <input id="pipetplastik" type="text" class="sampah border h-9 px-2 w-full">
+                <p class="text-xl font-bold py-1">5000/kg</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:flex lg:gap-5 mt-5">
+            <div class="lg:w-60 w-full flex flex-col">
+              <label for="kardus" class="font-semibold text-lg">Kardus :</label>
+              <div class="w-full flex gap-2 items-center">
+                <input id="kardus" type="text" class="sampah border h-9 px-2 w-full">
+                <p class="text-xl font-bold py-1">5000/kg</p>
+              </div>
+            </div>
+            <div class="lg:w-60 w-full flex flex-col">
+              <label for="wallkarton" class="font-semibold text-lg">Wall Karton :</label>
+              <div class="w-full flex gap-2 items-center">
+                <input id="wallkarton" type="text" class="sampah border h-9 px-2 w-full">
+                <p class="text-xl font-bold py-1">5000/kg</p>
+              </div>
+            </div>
+            <div class="lg:w-60 w-full flex flex-col">
+              <label for="kertaskarton" class="font-semibold text-lg">Kertas Karton :</label>
+              <div class="w-full flex gap-2 items-center">
+                <input id="kertaskarton" type="text" class="sampah border h-9 px-2 w-full">
+                <p class="text-xl font-bold py-1">5000/kg</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:flex lg:gap-5 mt-5">
+            <div class="lg:w-60 w-full flex flex-col">
+              <label for="kaleng" class="font-semibold text-lg">Kaleng :</label>
+              <div class="w-full flex gap-2 items-center">
+                <input id="kaleng" type="text" class="sampah border h-9 px-2 w-full">
+                <p class="text-xl font-bold py-1">5000/kg</p>
+              </div>
+            </div>
+            <div class="lg:w-60 w-full flex flex-col">
+              <label for="Aluminiumfoil" class="font-semibold text-lg">Aluminium foil :</label>
+              <div class="w-full flex gap-2 items-center">
+                <input id="Aluminiumfoil" type="text" class="sampah border h-9 px-2 w-full">
+                <p class="text-xl font-bold py-1">5000/kg</p>
+              </div>
+            </div>
+            <div class="lg:w-60 w-full flex flex-col">
+              <label for="kalengaerosol" class="font-semibold text-lg">Kaleng Aerosol :</label>
+              <div class="w-full flex gap-2 items-center">
+                <input id="kalengaerosol" type="text" class="sampah border h-9 px-2 w-full">
+                <p class="text-xl font-bold py-1">5000/kg</p>
+              </div>
+            </div>
+          </div>
+          <div class="py-2">
+            <div class="lg:mt-3 mt-5">
+              <label for="metodepembayaran" class="font-bold text-lg">Metode Pembayaran :</label>
+              <select id="metodepembayaran" class="select2">
+                <option selected>Pilih Metode Pembayaran</option>
+                <option value="Dana">Dana</option>
+                <option value="Gopay">Gopay</option>
+                <option value="BNI">BNI</option>
+                <option value="BRI">BRI</option>
+              </select>
+            </div>
+            <div class="mt-5 mx-1">
+              <input type="checkbox" id="metode" onchange="metode()">
+              <label for="metode">Gunakan timbangan CycleBin</label>
+            </div>
+            <div class="flex justify-center px-10 mt-5">
+              <a href="#" class="btn-jual">Jual Sampah</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="jualSampah.js"></script>
   <script src="nav.js"></script>

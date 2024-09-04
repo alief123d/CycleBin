@@ -8,7 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style type="text/tailwindcss">
     ::-webkit-scrollbar {
@@ -43,18 +45,20 @@
         } 
 
         .items{
-          @apply flex flex-col bg-white lg:w-1/2 lg:shadow-xl shadow-xl rounded-3xl py-5 w-[180px] border hover:shadow-none hover:scale-100 transition duration-300 ease-in-out;
+          @apply flex flex-col bg-white lg:w-1/2 lg:shadow-lg shadow-xl rounded-3xl py-5 w-[180px] border hover:shadow-none hover:scale-100 transition duration-300 ease-in-out;
         }
       }
     </style>
+
 <body>
 
-  <header class="secondary 2xl:p-2 opacity-90 fixed top-0 left-0 w-full flex items-center justify-center z-30">
-    <div class="container px-10">
+  <header class="secondary opacity-90 fixed top-0 left-0 w-full flex items-center justify-center z-30">
+    <div class="container lg:px-10 p-3 lg:p-0">
       <div class="flex items-center relative">
         <div class="px-4 flex">
-          <a href="#" class="font-bold text-primary text-3xl 2xl:text-4xl block text-white flex gap-2 items-center">
-            <img src="asset/logo.png" alt="" class="w-14 h-14">
+          <a href="#"
+            class="font-bold text-2xl text-primary lg:text-3xl 2xl:text-4xl block text-white flex gap-2 items-center">
+            <img src="asset/logo.png" alt="" class="lg:w-14 lg:h-14 h-12 w-12">
             <span>CycleBin</span>
           </a>
         </div>
@@ -70,10 +74,10 @@
           </button>
 
           <nav id="nav-menu"
-            class="lg:block lg:static lg:bg-transparent lg:max-w-full hidden absolute right-0 py-5 top-full bg-white shadow-lg w-full lg:shadow-none lg:rounded-none">
+            class="lg:block lg:static lg:bg-transparent lg:max-w-full hidden absolute right-0 py-5 top-16 bg-white shadow-lg w-full lg:shadow-none lg:rounded-none">
             <ul class="block lg:flex lg:text-white justify-end">
               <li class="group">
-                <a href="#" class="py-2 text-xl mx-8 flex 2xl:text-xl">Layanan</a>
+                <a href="home.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Home</a>
               </li>
               <li class="group">
                 <a href="shop.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Produk</a>
@@ -90,11 +94,12 @@
       </div>
     </div>
   </header>
-
+  
   <section class="w-full h-screen">
     <div class="w-full h-full items-center flex 2xl:justify-center">
       <div class="lg:mx-10 px-7 z-20 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center">
-        <h1 class="lg:text-5xl lg:w-1/2 font-bold text-[#9cdba6] text-4xl 2xl:text-6xl 2xl:text-center">Jadikan sampah mu masa depan mu!</h1>
+        <h1 class="lg:text-5xl lg:w-1/2 font-bold text-[#9cdba6] text-4xl 2xl:text-6xl 2xl:text-center">Jadikan sampah
+          mu masa depan mu!</h1>
         <h3 class="lg:w-1/2 lg:my-5 my-2 text-white 2xl:text-center 2xl:my-10">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
           deserunt quis, molestiae delectus nam facere, numquam non error
@@ -102,7 +107,7 @@
           excepturi porro!
         </h3>
         <a href="jualSampah.html"
-            class="relative inline-flex items-center overflow-hidden justify-start font-medium transition-all border border-[#468585] border-2 hover:border-[#50b498] rounded-full group py-2 px-3">
+          class="relative inline-flex items-center overflow-hidden justify-start font-medium transition-all border border-[#468585] border-2 hover:border-[#50b498] rounded-full group py-2 px-3">
           <span
             class="w-40 h-20 rounded primary absolute bottom-0 left-0 translate-x-full ease-in-out duration-500 transition-all translate-y-full mb-12 ml-9 group-hover:ml-0 group-hover:translate-x-0"></span>
           <span class="relative w-full text-left ease-in-out transition-all text-white duration-200">
@@ -154,32 +159,32 @@
     </div>
   </section>
 
-  <section class="w-full lg:min-h-screen py-12 flex items-center bg-[#def9c4]">
-    <div class="w-full h-full justify-center flex flex-col">
-      <h1 class="lead lg:text-4xl lg:mb-10 text-3xl text-center mx-10 2xl:text-4xl">Jenis sampah yang kami terima</h1>
+  <section class="w-full mb-14 justify-center flex items-center lg:px-10 px-5">
+    <div class="w-full justify-center flex flex-col bg-[#def9c4] py-5 rounded-3xl">
+      <h1 class="lead lg:text-4xl lg:mb-10 text-3xl text-center mx-10 2xl:text-4xl">Jenis Sampah Yang Kami Terima</h1>
       <div class="w-full h-full overflow-x-scroll">
-        <div class="py-10 flex lg:gap-10 lg:px-16 justify-center gap-5 w-[800px] lg:w-full">
+        <div class="py-6 flex lg:gap-10 lg:px-16 justify-center gap-5 w-[800px] lg:w-full">
           <a href="detail-sampah.html" class="items">
-            <div class="flex justify-center">
-              <img src="asset/plastik2-rev.png" alt="">
+            <div class="flex justify-center overflow-hidden h-48 w-full">
+              <img src="asset/plastikk.png" alt="" class="object-cover">
             </div>
             <h4 class="text-center text-xl lead">Plastik</h4>
           </a>
           <a href="detail-sampah.html" class="items">
-            <div class="flex justify-center">
-              <img src="asset/kardus-rev.png" alt="">
+            <div class="flex justify-center overflow-hidden h-48 w-full">
+              <img src="asset/karduss.png" alt="" class="object-cover">
             </div>
             <h4 class="text-center text-xl lead">Kardus</h4>
           </a>
           <a href="detail-sampah.html" class="items">
-            <div class="flex justify-center">
-              <img src="asset/kaleng-rev.png" alt="">
+            <div class="flex justify-center overflow-hidden h-48 w-full">
+              <img src="asset/logam.png" alt="" class="object-cover">
             </div>
-            <h4 class="text-center text-xl lead">Kaleng</h4>
+            <h4 class="text-center text-xl lead">Logam</h4>
           </a>
           <a href="detail-sampah.html" class="items">
-            <div class="flex justify-center">
-              <img src="asset/kain perca-rev.png" alt="">
+            <div class="flex justify-center overflow-hidden h-48 w-full">
+              <img src="asset/plastikk.png" alt="" class="object-cover">
             </div>
             <h4 class="text-center text-xl lead">Kain Perca</h4>
           </a>
@@ -188,39 +193,46 @@
     </div>
   </section>
 
-  <section class="w-full min-h-screen flex items-center px-4">
+  <section class="w-full min-h-screen lg:h-screen">
     <div class="w-full h-full justify-center flex flex-col my-10">
-      <h1 class="lead lg:text-4xl lg:mb-10 text-3xl text-center lg:mx-10 2xl:text-4xl">Cara menjual sampah </h1>
+      <h1 class="lead lg:text-4xl lg:mb-5 text-3xl text-center lg:mx-10 2xl:text-4xl">Cara menjual sampah </h1>
       <div class="w-full h-full flex flex-col lg:flex-row lg:px-10 lg:flex-wrap justify-center">
-        <div class="lg:w-1/2 text-center lg:text-start w-full p-10 lg:p-0 flex flex-col lg:flex-row lg:my-10 justify-center items-center">
+        <div
+          class="lg:w-1/2 text-center lg:text-start w-full p-10 lg:p-0 flex flex-col lg:flex-row lg:my-10 justify-center items-center">
           <div class="w-28 h-28 2xl:w-44 2xl:h-44 rounded-full overflow-hidden">
-            <img src="asset/icon cara jual sampah 1.png" class="object-cover h-full" alt="">
+            <img src="asset/icon cara jual sampah 1.png" class="object-cover h-full  z-10" alt="">
           </div>
           <div class="lg:w-2/4 lg:ml-5">
             <h1 class="lead text-xl my-3 2xl:text-2xl">1. Siapkan Sampah Anda</h1>
-            <p>Pastikan sampah yang ingin dikirim telah dicuci bersih dan kering. Lalu packing dengan diikat ataupun di bungkus dalam plastik besar ataupun karung</p>
+            <p>Pastikan sampah yang ingin dikirim telah dicuci bersih dan kering. Lalu packing dengan diikat ataupun di
+              bungkus dalam plastik besar ataupun karung</p>
           </div>
         </div>
-        <div class="lg:w-1/2 text-center lg:text-start w-full p-10 lg:p-0 flex flex-col lg:flex-row lg:my-10 justify-center items-center">
+        <div
+          class="lg:w-1/2 text-center lg:text-start w-full p-10 lg:p-0 flex flex-col lg:flex-row lg:my-10 justify-center items-center">
           <div class="w-28 h-28 2xl:w-44 2xl:h-44 rounded-full overflow-hidden">
             <img src="asset/icon cara jual sampah 3.png" class="object-cover h-full" alt="">
           </div>
           <div class="lg:w-2/4 lg:ml-5">
             <h1 class="lead text-xl my-3 2xl:text-2xl">2. Isi Data Diri Anda</h1>
-            <p>Mohon mengisi data diri pada formulir pengiriman sampah dengan lengkap. Pastikan alamat pengiriman, nomor telepon, dan informasi kontak lainnya sesuai dengan identitas Anda.</p>
+            <p>Mohon mengisi data diri pada formulir pengiriman sampah dengan lengkap. Pastikan alamat pengiriman, nomor
+              telepon, dan informasi kontak lainnya sesuai dengan identitas Anda.</p>
           </div>
         </div>
-        <div class="lg:w-1/2 text-center lg:text-start w-full p-10 lg:p-0 flex flex-col lg:flex-row lg:my-10 justify-center items-center">
+        <div
+          class="lg:w-1/2 text-center lg:text-start w-full p-10 lg:p-0 flex flex-col lg:flex-row lg:my-10 justify-center items-center">
           <div class="w-28 h-28 2xl:w-44 2xl:h-44 rounded-full overflow-hidden">
             <img src="asset/icon cara jual sampah 2.png" class="object-cover h-full" alt="">
           </div>
           <div class="lg:w-2/4 lg:ml-5">
             <h1 class="lead text-xl my-3 2xl:text-2xl">3. Kirim Sampah</h1>
-            <p>Anda dapat memilih opsi pengiriman untuk dijemput kerumah Anda ataupun datang langsung ke mitra CycleBin terdekat.</p>
+            <p>Anda dapat memilih opsi pengiriman untuk dijemput kerumah Anda ataupun datang langsung ke mitra CycleBin
+              terdekat.</p>
           </div>
         </div>
-        <div class="lg:w-1/2 text-center lg:text-start w-full p-10 lg:p-0 flex flex-col lg:flex-row lg:my-10 justify-center items-center">
-          <div class="w-28 h-28 2xl:w-44 2xl:h-44 rounded-full overflow-hidden">
+        <div
+          class="lg:w-1/2 text-center lg:text-start w-full p-10 lg:p-0 flex flex-col lg:flex-row lg:my-10 justify-center items-center">
+          <div class="w-32 h-32 2xl:w-44 2xl:h-44 rounded-full overflow-hidden">
             <img src="asset/icon cara jual sampah 4.png" class="object-cover h-full" alt="">
           </div>
           <div class="lg:w-2/4 lg:ml-5">
@@ -232,9 +244,22 @@
     </div>
   </section>
 
-  <!-- <section class="w-full min-h-screen flex items-center">
-
-  </section> -->
+  <section class="w-full h-screen lg:h-screen">
+    <div class="w-full h-full lg:px-52 px-10 flex flex-col lg:flex-row items-center justify-center">
+      <img src="asset/People collecting recyclable trash illustration.jfif" alt="" class="lg:w-1/2 z-10">
+      <!-- https://pin.it/1XLmU7GIt -->
+      <div class="flex flex-col justify-center items-center text-center lg:text-start lg:justify-start lg:items-start gap-5">
+        <p class="lead text-3xl lg:text-4xl z-10">Tunggu Apalagi Ayo Hasilkan Uang Sambil Menjaga Lingkungan</p>
+        <a href="jualSampah.html"
+          class="relative w-40 my-3 inline-flex items-center overflow-hidden justify-start font-medium transition-all border border-[#468585] border-2 hover:border-[#50b498] rounded-full group py-2 px-3">
+          <span
+            class="w-40 h-20 rounded primary absolute bottom-0 left-0 translate-x-full ease-in-out duration-500 transition-all translate-y-full mb-12 ml-9 group-hover:ml-0 group-hover:translate-x-0"></span>
+          <span class="relative w-full text-center ease-in-out transition-all group-hover:text-white duration-200">
+            Jual sampah mu</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <script src="home.js"></script>
 </body>

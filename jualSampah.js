@@ -59,10 +59,10 @@ function kecamatan() {
 }
 
 function kelurahan() {
-  let kecamatan = document.getElementById('Kecamatan');
-  let kelurahan = document.getElementById('Kelurahan');
+  let kecamatan = document.getElementById('Kecamatan')
+  let kelurahan = document.getElementById('Kelurahan')
 
-  let pilihKecamatan = kecamatan.value;
+  let pilihKecamatan = kecamatan.value
 
   let namakelurahan = {
     'Tampan': ['Sidomulyo Barat', 'Sidomulyo Timur', 'Simpang Baru'],
@@ -101,16 +101,33 @@ function kelurahan() {
     'Kebayoran Baru': ['Gunung', 'Pulo', 'Rawa Barat'],
     'Tebet': ['Tebet Barat', 'Tebet Timur', 'Kebon Baru'],
     'Pasar Minggu': ['Ragunan', 'Pejaten Barat', 'Pejaten Timur']
-  };
+  }
 
-  kelurahan.innerHTML = '<option selected>Pilih Kelurahan</option>';
+  kelurahan.innerHTML = '<option selected>Pilih Kelurahan</option>'
 
   if (pilihKecamatan in namakelurahan) {
     namakelurahan[pilihKecamatan].forEach(kel => {
-      let option = document.createElement('option');
-      option.value = kel;
-      option.textContent = kel;
-      kelurahan.appendChild(option);
+      let option = document.createElement('option')
+      option.value = kel
+      option.textContent = kel
+      kelurahan.appendChild(option)
     });
+  }
+}
+
+function metode() {
+  let sampah = document.querySelectorAll('.sampah')
+  let metode = document.getElementById('metode')
+
+  if (metode.checked == true) {
+    sampah.forEach(function (input) {
+      input.setAttribute('disabled', 'disabled')
+      input.classList.add('cursor-not-allowed')
+    })
+  } else {
+    sampah.forEach(function (input) {
+      input.removeAttribute('disabled')
+      input.classList.remove('cursor-not-allowed')
+    })
   }
 }
