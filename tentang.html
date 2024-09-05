@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="tentang.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+        display: none;
+      }
+      @layer utilities {
+        .lead {
+          color: #468585;
+          font-weight: bold;
+          font-family: poppins;
+        }
+
+        .primary {
+          background-color: #468585;
+        }
+
+        .secondary {
+          background-color: rgba(80, 180, 152, 1);
+        }
+
+        .hamburger-active > .bungkus > span:nth-child(1) {
+          @apply rotate-45;
+        }
+
+        .hamburger-active > .bungkus > span:nth-child(3) {
+          @apply -rotate-45;
+        }
+
+        .hamburger-active > .bungkus > span:nth-child(2) {
+          @apply scale-0;
+        }
+
+        .items {
+          @apply flex flex-col bg-white lg:w-1/2 lg:shadow-lg shadow-xl rounded-3xl py-5 w-[180px] border hover:shadow-none hover:scale-100 transition duration-300 ease-in-out;
+        }
+
+        .slide {
+            @apply w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)];
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <header class="secondary opacity-90 fixed top-0 left-0 w-full flex items-center justify-center z-30">
+        <div class="container lg:px-10 p-3 lg:p-0">
+            <div class="flex items-center relative">
+                <div class="px-4 flex">
+                    <a href="#"
+                        class="font-bold text-2xl text-primary lg:text-3xl 2xl:text-4xl block text-white flex gap-2 items-center">
+                        <img src="asset/logo.png" alt="" class="lg:w-14 lg:h-14 h-12 w-12" />
+                        <span>CycleBin</span>
+                    </a>
+                </div>
+                <div class="flex items-center px-4 w-1/2 w-full">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <div class="bungkus space-y-2">
+                            <span
+                                class="block w-[30px] h-[2px] bg-gray-600 transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="block w-[30px] h-[2px] bg-gray-600 transition duration-300 ease-in-out"></span>
+                            <span
+                                class="block w-[30px] h-[2px] bg-gray-600 transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </div>
+                    </button>
+
+                    <nav id="nav-menu"
+                        class="lg:block lg:static lg:bg-transparent lg:max-w-full hidden absolute right-0 py-5 top-16 bg-white shadow-lg w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex lg:text-white justify-end">
+                            <li class="group">
+                                <a href="home.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="shop.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Produk</a>
+                            </li>
+                            <li class="group">
+                                <a href="artikel.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Artikel</a>
+                            </li>
+                            <li class="group">
+                                <a href="tentang.html" class="py-2 text-xl mx-8 flex 2xl:text-xl">Profile</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="w-full h-screen">
+        <div class="flex justify-center items-center h-screen flex-col px-10">
+            <h1 class="lead xl:text-6xl lg:text-4xl xl:text-2xl my-10 w-1/2 text-center">
+                Ubah Sampah Mu Jadi Masa Depan Mu
+            </h1>
+            <div class="slide">
+                <ul
+                    class="flex items-center justify-center md:justify-start animate-infinite-scroll">
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill-1.png" alt="" class="max-w-none"/>
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill-2.png" alt="" class="max-w-none"/>
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 3.png" alt="" class="max-w-none"/>
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 4.png" alt="" class="max-w-none"/>
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 5.png" alt="" class="max-w-none"/>
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 6.png" alt="" class="max-w-none"/>
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 7.png" alt="" class="max-w-none"/>
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 8.png" alt="" class="max-w-none"/>
+                    </li>
+                </ul>
+                <ul class="flex items-center justify-center md:justify-start animate-infinite-scroll"
+                    aria-hidden="true">
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill-1.png" alt="" class="max-w-none" />
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill-2.png" alt="" class="max-w-none" />
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 3.png" alt="" class="max-w-none" />
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 4.png" alt="" class="max-w-none" />
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 5.png" alt="" class="max-w-none" />
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 6.png" alt="" class="max-w-none" />
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 7.png" alt="" class="max-w-none" />
+                    </li>
+                    <li class="mx-8">
+                        <img src="asset/slide-profile/ill 8.png" alt="" class="max-w-none" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full h-screen xl:p-52 flex justify-center items-center">
+        <div
+            class="xl:py-32 border-[#468585] border-2 flex justify-center items-center flex-col text-center rounded-2xl">
+            <div class="flex flex-col justify-center items-center">
+                <img src="asset/logo.png" alt="" class="lg:w-36 lg:h-36 h-12 w-12">
+                <h1 class="lead xl:text-6xl lg:text-4xl xl:text-2xl mt-3 mb-8">
+                    CycleBin
+                </h1>
+            </div>
+            <h3 class="w-1/2">
+                <b>
+                    CycleBin Berdiri mengambil peranan dalam penjagaan lingkungan.
+                    CycleBin mengambil langkah bahwa pengelolahan sampah daur ulang
+                    adalah langkah terbaik untuk mengatasi krisis limbah sampah dan kami
+                    bekerja tanpa lelah untuk memastikan bahwa pengelolahan sampah di
+                    lakukan dengan cara yang aman dan efektif. Dengan CycleBin. Anda tidak perlu khawatir karna kami
+                    mengelolah
+                    sampah daur ulang anda secara bertanggung jawab. dan Anda pun sudah
+                    ikut serta dalam penjagaan lingkungan yang lebih bersih dan sehat
+                    untuk generasi mendatang
+                </b>
+            </h3>
+        </div>
+    </div>
+
+    <div class="w-full h-screen">
+        <div class="w-full h-full flex flex-col gap-5">
+            <div class="flex gap-5 w-full absolute">
+                <div class="bg-slate-500 w-1/3 h-96"></div>
+                <div class="bg-slate-500 w-1/2 h-96"></div>
+                <div class="bg-slate-500 w-1/3 h-96"></div>
+            </div>
+            <div class="flex gap-5 w-full">
+                <div class="bg-slate-500 w-1/3 h-96"></div>
+                <div class="bg-slate-500 w-1/2 h-96"></div>
+                <div class="bg-slate-500 w-1/3 h-96"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="asset/1.jpg" />
+        <div class="text">
+            <h1>Misi</h1>
+            <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+                necessitatibus praesentium officiis accusamus sequi deserunt nihil
+                doloribus dicta eaque ipsum, accusantium vitae nam porro, labore
+                dignissimos repudiandae sunt mollitia cum.
+            </h3>
+        </div>
+    </div>
+    <div class="image-container-reverse">
+        <img src="asset/2.jpg" />
+        <div class="text">
+            <h1>Visi</h1>
+            <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+                necessitatibus praesentium officiis accusamus sequi deserunt nihil
+                doloribus dicta eaque ipsum, accusantium vitae nam porro, labore
+                dignissimos repudiandae sunt mollitia cum.
+            </h3>
+        </div>
+    </div>
+    <div class="w-full h-screen">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <div class="w-full h-full bg-black absolute z-10 opacity-50"></div>
+            <img src="asset/4.jpg" class="w-full h-full absolute" />
+            <h1 class="z-20 my-10 text-white font-bold xl:text-4xl">
+                Yuk! tukar kan sampah mu jadi masa depan mu!
+            </h1>
+            <a href="jualSampah.html"
+                class="relative z-20 inline-flex items-center overflow-hidden justify-start font-medium transition-all border border-[#468585] border-2 hover:border-[#50b498] rounded-full group py-2 px-3">
+                <span
+                    class="w-40 h-20 z-20 rounded primary absolute bottom-0 left-0 translate-x-full ease-in-out duration-500 transition-all translate-y-full mb-12 ml-9 group-hover:ml-0 group-hover:translate-x-0"></span>
+                <span class="relative z-20 w-full text-left ease-in-out transition-all text-white duration-200">
+                    Jual sampah mu</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
