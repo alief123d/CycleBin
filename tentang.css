@@ -1,14 +1,4 @@
-.image-container {
-    display: flex;
-    align-items: center;
-    margin-top: 100px;
-}
 
-.image-container img {
-    width: 30%;
-    margin-right: 20px;
-    margin-top: 50px;
-}
 
 .image-container .text {
     flex: 1;
@@ -26,9 +16,4 @@
     width: 30%;
     margin-left: 20px;
     margin-top: 50px;
-}
-
-.image-container-reverse .text {
-    flex: 1;
-    align-items: center;
 }
